@@ -1,0 +1,7 @@
+Practica2 Vue3
+Nombre(s) de integrante(s):
+- Andrea Carolina Llanos Rocha
+
+Pasos para iniciar el proyecto
+1. npm install
+2. npm run serve

@@ -10,16 +10,16 @@
           <th>Nombres</th>
           <th>Apellidos</th>
           <th>Cédula</th>
-          <th>Género</th>
+          <th>Genero</th>
           <th>Fecha de Nacimiento</th>
           <th>Lugar de Nacimiento</th>
           <th>Email</th>
-          <th>Dirección</th>
-          <th>Teléfono</th>
+          <th>Direccion</th>
+          <th>Telefono</th>
           <th>Enfermedad</th>
           <th>Medicamentos</th>
           <th>Alergias</th>
-          <th>Fecha de Creación</th>
+          <th>Fecha de Creacion</th>
           <th>Activo</th>
           <th>Acciones</th>
         </tr>
@@ -53,13 +53,13 @@
     <form @submit.prevent="guardarPaciente">
       <input v-model="nuevoPaciente.nombres" placeholder="Nombres" required />
       <input v-model="nuevoPaciente.apellidos" placeholder="Apellidos" required />
-      <input v-model="nuevoPaciente.ci" placeholder="Cédula de Identidad" required />
-      <input v-model="nuevoPaciente.genero" placeholder="Género" required />
+      <input v-model="nuevoPaciente.ci" placeholder="CI" required />
+      <input v-model="nuevoPaciente.genero" placeholder="Genero" required />
       <input v-model="nuevoPaciente.fecha_nacimiento" type="date" placeholder="Fecha de Nacimiento" required />
       <input v-model="nuevoPaciente.lugar_nacimiento" placeholder="Lugar de Nacimiento" required />
       <input v-model="nuevoPaciente.email" type="email" placeholder="Email" required />
-      <input v-model="nuevoPaciente.direccion" placeholder="Dirección" required />
-      <input v-model="nuevoPaciente.telefono" placeholder="Teléfono" required />
+      <input v-model="nuevoPaciente.direccion" placeholder="Direccion" required />
+      <input v-model="nuevoPaciente.telefono" placeholder="Telefono" required />
       <input v-model="nuevoPaciente.enfermedad" placeholder="Enfermedad" />
       <input v-model="nuevoPaciente.medicamentos" placeholder="Medicamentos" />
       <input v-model="nuevoPaciente.alergias" placeholder="Alergias" />
@@ -111,8 +111,7 @@ export default {
       };
     },
     cargarPacientes() {
-      // Aquí debes realizar la solicitud al backend (por ejemplo, con axios)
-      // para obtener la lista de pacientes desde el JSON server.
+
       fetch('http://localhost:3000/pacientes')
         .then(response => response.json())
         .then(data => {
@@ -120,7 +119,7 @@ export default {
         });
     },
     guardarPaciente() {
-      // Aquí puedes enviar los datos al backend para crear o actualizar un paciente.
+ 
       const method = this.nuevoPaciente.id ? 'PUT' : 'POST';
       const url = this.nuevoPaciente.id
         ? `http://localhost:3000/pacientes/${this.nuevoPaciente.id}`

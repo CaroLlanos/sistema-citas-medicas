@@ -1,0 +1,59 @@
+{
+  "pacientes": [
+    {
+      "id": 1,
+      "nombres": "Juan",
+      "apellidos": "Fulanito",
+      "ci": "1234567",
+      "genero": "Masculino",
+      "fechaNacimiento": "2000-08-08",
+      "lugarNacimiento": "Tarija",
+      "email": "juanz@example.com",
+      "direccion": "Calle 123",
+      "telefono": "78787878",
+      "enfermedad": "Resfriado",
+      "medicamentos": "Paracetamol",
+      "alergias": "Penicilina",
+      "fechaCreacion": "2024-08-10",
+      "activo": true
+    }
+
+  ],
+  "medicos": [
+    {
+      "id": 1,
+      "nombres": "Ana",
+      "apellidos": "Gomez",
+      "ci": "12121212",
+      "genero": "Femenino",
+      "fechaNacimiento": "1980-01-01",
+      "lugarNacimiento": "Cercado",
+      "email": "ana.gomez@example.com",
+      "direccion": "Calle 456",
+      "telefono": "12312312",
+      "especialidad": "Cardiologia",
+      "fechaCreacion": "2024-08-10",
+      "activo": true
+    }
+
+  ],
+  "citas": [
+    {
+      "id": 1,
+      "titulo": "Consulta Cardiologia",
+      "descripcion": "Revision general del estado cardiaco",
+      "medicoId": 1,
+      "pacienteId": 1,
+      "fechaAtencion": "2024-08-20",
+      "horaInicioAtencion": "09:00",
+      "horaFinalAtencion": "09:30",
+      "estado": "Pendiente",
+      "observaciones": "Ninguna",
+      "precio": 300,
+      "pago": 150,
+      "fechaCreacion": "2024-08-15",
+      "activo": true
+    }
+
+  ]
+}
